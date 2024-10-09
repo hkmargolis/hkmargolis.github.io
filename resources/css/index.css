@@ -1,0 +1,41 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+fieldset, button {
+    font-size: 24px;
+    padding: 10px;
+    border-color: white;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 24px;
+    background-color: white;
+
+}
+
+input[type="checkbox"]:hover {
+    background-color: grey;
+}
+
+h1 {
+
+}
+
+h2.planet-form-q {
+    padding-top: 50px;
+}
+p,
+li {
+}
+
+
+a {
+    text-decoration: underline;
+}
