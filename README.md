@@ -1,2 +1,2 @@
 # SpaceSite
-Exploring frontend development with a space-theme!
+Exploring web development with a space-theme!
