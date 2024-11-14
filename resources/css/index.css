@@ -32,6 +32,8 @@ input[type="checkbox"]:hover {
 }
 
 h1 {
+    font-size: 32px;
+    align-content: center;
 
 }
 
@@ -60,9 +62,7 @@ img.center {
 }
 
 .navbar {
-    display: flex;
-    position: sticky;
-    align-items: center;
+    display: inline-flex;
     justify-content: space-between;
     padding: 10px 20px;
 }
