@@ -16,3 +16,14 @@ img {
 ul{
     font-size: 24px;
 }
+
+a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media print {
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+    }
+}

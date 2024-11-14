@@ -9,3 +9,14 @@ ul{
     border-color: white;
     border-radius: 10px;
 }
+
+a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media print {
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+    }
+}
