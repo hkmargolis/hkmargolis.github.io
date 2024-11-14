@@ -53,3 +53,11 @@ img.center {
         content: " (" attr(href) ")";
     }
 }
+
+.navbar {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
