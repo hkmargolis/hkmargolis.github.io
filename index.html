@@ -2,52 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SpaceSite</title>
-    <link href="resources/css/index.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Silkscreen:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <div class="navbar">
-        <a class="active" href="/index.html">Home</a>
-        <a href="pages/planets.html">The Planets</a>
-    </div>
+    <title>BookWormSite</title>
+    <link rel="stylesheet" href="resources/css/breadcrumb.css">
+    <link rel="stylesheet" href="resources/css/navbar.css">
+    <link rel="stylesheet" href="resources/css/linklist.css">
+    <link rel="stylesheet" href="resources/css/general.css">
 </head>
 <body>
-    <h1>SpaceSite: A Web-Dev Portfolio</h1>
-<main>
-    <h2 class="planet-form-q">What is your favorite planet?</h2>
-    <form id="favorite-planet-form">
-        <fieldset>
-        <legend>Select 1:</legend>
-            <input type="checkbox" id="mercury" name="planets" value="mercury">
-            <label for="mercury">Mercury</label> <br>
+<div class="navbar">
+<!--    <a class="active" href="index.html">Home</a>-->
+    <a href="#">Home</a>
+    <a href="RecReading.html">Recommended Reading</a>
+    <a href="Resources.html">Resources</a>
+    <a href="About.html">About</a>
+</div>
+<!-- Add your site or application content here -->
+<div class="hero">
+    <h1 class="title">Book Worm Project</h1>
+    <h2 class="subtitle">Annual Reading Tracker</h2>
+    <img class="open_book_stars" src="resources/images/open_book_stars.png" alt="open book">
+</div>
 
-            <input type="checkbox" id="venus" name="planets" value="venus">
-            <label for="venus">Venus</label> <br>
-
-            <input type="checkbox" id="earth" name="planets" value="earth">
-            <label for="earth">Earth</label> <br>
-
-            <input type="checkbox" id="mars" name="planets" value="mars">
-            <label for="mars">Mars</label> <br>
-
-            <input type="checkbox" id="jupiter" name="planets" value="jupiter">
-            <label for="jupiter">Jupiter</label> <br>
-
-            <input type="checkbox" id="saturn" name="planets" value="saturn">
-            <label for="Saturn">Saturn</label> <br>
-
-            <input type="checkbox" id="uranus" name="planets" value="uranus">
-            <label for="uranus">Uranus</label> <br>
-
-            <input type="checkbox" id="neptune" name="planets" value="neptune">
-            <label for="neptune">Neptune</label> <br>
-
-        </fieldset>
-
-        <button type="submit">Submit</button>
-
-    </form>
-
-    <h2 class="planet-info-link">Not sure? <a href="pages/planets.html" >Learn about the planets.</a></h2>
-</main>
+<div class="2025">
+    <h3>2025</h3>
+    <ul class="linklist">
+        <li class="linklist"><a href="pages/2025Months/January.html">January</a></li>
+        <li class="linklist"><a href="pages/2025Months/February.html">February</a></li>
+        <li class="linklist"><a href="pages/2025Months/March.html">March</a></li>
+        <li class="linklist"><a href="pages/2025Months/April.html">April</a></li>
+        <li class="linklist"><a href="pages/2025Months/May.html">May</a></li>
+        <li><a href="pages/2025Months/June.html">June</a></li>
+        <li><a href="pages/2025Months/July.html">July</a></li>
+        <li><a href="pages/2025Months/August.html">August</a></li>
+        <li><a href="pages/2025Months/September.html">September</a></li>
+        <li><a href="pages/2025Months/October.html">October</a></li>
+        <li><a href="pages/2025Months/November.html">November</a></li>
+        <li><a href="pages/2025Months/December.html">December</a></li>
+    </ul>
+</div>
+<!--<script src="js/app.js"></script>-->
 </body>
 </html>

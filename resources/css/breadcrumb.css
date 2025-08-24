@@ -1,0 +1,14 @@
+.breadcrumb {
+  text-align: left;
+}
+.breadcrumb a {
+  display: inline;
+}
+
+.breadcrumb li+li::before {
+  color: gray;
+  content: ">";
+}
+.breadcrumb a {
+  display: inline;
+}

@@ -1,0 +1,17 @@
+.linklist a {
+  color: black;
+  text-decoration: none;
+}
+.linklist a:visited {
+  color: grey;
+}
+
+.linklist a:hover {
+  color: orange;
+}
+
+.linklist ul {
+  list-style-type: "📖 ";
+}
+
+
