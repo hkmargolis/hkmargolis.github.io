@@ -1,7 +1,13 @@
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
 .navbar a {
   display: inline;
   color: white;
-  background: black;
+  background: rgba(28,3,51);
   text-decoration: none;
   position: relative;
   height: 30px;
@@ -11,11 +17,27 @@
   padding: 5px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border: 3px solid #0000;
+  background: linear-gradient(#131219, #131219) padding-box, linear-gradient(
+          var(--angle),
+          red, orange, yellow, green, blue, indigo, violet
+  ) border-box;
+  animation: 8s rotate linear infinite;
+}
 
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
 .navbar a:hover {
-  color: orange;
   box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.4);
-
+  animation: pulse 0.5s infinite alternate;
 }

@@ -1,45 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
-    <meta charset="UTF-8">
-    <title>BookWormSite</title>
-    <link rel="stylesheet" href="resources/css/breadcrumb.css">
-    <link rel="stylesheet" href="resources/css/navbar.css">
-    <link rel="stylesheet" href="resources/css/linklist.css">
-    <link rel="stylesheet" href="resources/css/general.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/breadcrumb.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/linklist.css">
+
+    <meta name="description" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
 </head>
+
 <body>
-<div class="navbar">
-<!--    <a class="active" href="index.html">Home</a>-->
+
+<!-- Add your site or application content here -->
+<ul class="navbar">
     <a href="#">Home</a>
     <a href="RecReading.html">Recommended Reading</a>
     <a href="Resources.html">Resources</a>
     <a href="About.html">About</a>
-</div>
-<!-- Add your site or application content here -->
+</ul>
 <div class="hero">
     <h1 class="title">Book Worm Project</h1>
     <h2 class="subtitle">Annual Reading Tracker</h2>
-    <img class="open_book_stars" src="resources/images/open_book_stars.png" alt="open book">
+    <img class="icon" src="img/open_book_stars.png" alt="open book">
 </div>
+<div class="grid-container">
+    <div class="months">
+        <div class="2025">
+            <h3>2025</h3>
+            <ul class="linklist">
+                <li class="linklist"><a href="2025Months/2025Books.html">All Books</a></li>
+                <li class="linklist"><a href="2025Months/January.html">January</a></li>
+                <li class="linklist"><a href="2025Months/February.html">February</a></li>
+                <li class="linklist"><a href="2025Months/March.html">March</a></li>
+                <li class="linklist"><a href="2025Months/April.html">April</a></li>
+                <li class="linklist"><a href="2025Months/May.html">May</a></li>
+                <li><a href="2025Months/June.html">June</a></li>
+                <li><a href="2025Months/July.html">July</a></li>
+                <li><a href="2025Months/August.html">August</a></li>
+                <li><a href="2025Months/September.html">September</a></li>
+                <li><a href="2025Months/October.html">October</a></li>
+                <li><a href="2025Months/November.html">November</a></li>
+                <li><a href="2025Months/December.html">December</a></li>
+            </ul>
+        </div>
 
-<div class="2025">
-    <h3>2025</h3>
-    <ul class="linklist">
-        <li class="linklist"><a href="pages/2025Months/January.html">January</a></li>
-        <li class="linklist"><a href="pages/2025Months/February.html">February</a></li>
-        <li class="linklist"><a href="pages/2025Months/March.html">March</a></li>
-        <li class="linklist"><a href="pages/2025Months/April.html">April</a></li>
-        <li class="linklist"><a href="pages/2025Months/May.html">May</a></li>
-        <li><a href="pages/2025Months/June.html">June</a></li>
-        <li><a href="pages/2025Months/July.html">July</a></li>
-        <li><a href="pages/2025Months/August.html">August</a></li>
-        <li><a href="pages/2025Months/September.html">September</a></li>
-        <li><a href="pages/2025Months/October.html">October</a></li>
-        <li><a href="pages/2025Months/November.html">November</a></li>
-        <li><a href="pages/2025Months/December.html">December</a></li>
-    </ul>
+    </div>
+    <div class="quiz">
+        <h3>Quiz (Coming Soon...)</h3>
+        <div class="quiz-form">
+            <h3>Open Trivia DB Question</h3>
+            <button class="button" id="a" value="a">a</button>
+            <button class="button" id="b" value="b">b</button>
+            <button class="button" id="c" value="c">c</button>
+            <button class="button" id="d" value="d">d</button>
+        </div>
+        <h3 class="score">Score: </h3>
+    </div>
+
 </div>
-<!--<script src="js/app.js"></script>-->
+<script src="js/app.js"></script>
+
 </body>
+
 </html>
