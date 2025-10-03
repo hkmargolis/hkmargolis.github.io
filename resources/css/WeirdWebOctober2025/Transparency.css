@@ -1,0 +1,152 @@
+* {
+  background-color: black;
+  color: white;
+  font-family: "Jersey 10", sans-serif;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #ffffff;
+  font-size: 20px;
+  color: #000000;
+  line-height: 50px;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 25px;
+  animation: float 10s infinite;
+  /*opacity: 25%;*/
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  border-width: 20px 20px 0;
+  bottom: -15px;
+  left: 84%;
+  margin-left: -20px;
+}
+
+.prompt {
+  text-align: center;
+  opacity: 50%;
+}
+
+.ghost {
+  display:block;
+  opacity: 0;
+  transition: all 2s;
+  margin: auto;
+  max-height: 350px;
+  position: relative;
+  background-color: transparent;
+  filter:invert(100) blur(1px);
+  animation: float 3s infinite;
+}
+
+.ghost:hover {
+  opacity:20%;
+  transition: all 1s;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.4;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 0.75;
+  }
+  35% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.75;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.75;
+  }
+}
+
+@keyframes shadow-dance {
+  0%, 100% {
+    text-shadow: 5px 5px 0 rgba(197, 197, 197, 0.5), 10px 10px 0 rgba(108, 108, 108, 0.5);
+  }
+  50% {
+    text-shadow: -5px -5px 0 rgba(108, 108, 108, 0.5), -10px -10px 0 rgba(197, 197, 197, 0.5);
+  }
+}
+
+@keyframes melt {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes move {
+  0% {
+    top: 100%;
+    transform: translateY(0%)
+  }
+  100% {
+    top: 0;
+    transform: translateY(-100%)
+  }
+}

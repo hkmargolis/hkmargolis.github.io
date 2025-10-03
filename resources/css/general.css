@@ -15,6 +15,10 @@
 /*  }*/
 /*}*/
 
+.body {
+  font-family: monospace;
+}
+
 .subtitle {
   font-style: italic;
   /*animation-duration: 3s;*/
@@ -65,6 +69,11 @@
   /*border-color: black;*/
   /*border-style: solid;*/
   /*border-width: 2px;*/
+}
+
+footer {
+  display: block;
+  text-align: center;
 }
 
 .months, .quiz {

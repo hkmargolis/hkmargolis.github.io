@@ -1,0 +1,41 @@
+* {
+  font-family: "Rock Salt", sans-serif;
+  font-size: 12px;
+}
+
+.prompt {
+  text-align:center;
+  color:black;
+  background-color: white;
+}
+
+.background {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/d/da/Maps_%28song%29_cover.jpg");
+  background-repeat: repeat;
+}
+
+.video {
+  border-width: 50px;
+  display: block;
+  margin: auto;
+
+  --s: 475px; /* image size */
+  --b: 14px; /* control the border thickness */
+  --n: 5; /* number of borders */
+  --c: #000000;
+
+  width: var(--s);
+  aspect-ratio: 1.2; /* It works with any ratio */
+  object-fit: cover;
+  --_p:calc(var(--b)*var(--n));
+  --_d:calc(var(--s)/(2*var(--n)) + var(--b));
+  padding: 10px;
+  border-radius: calc(var(--_p) + var(--b)/4);
+  border-image:
+    repeating-radial-gradient(
+      var(--c) 0,#0000 2px calc(var(--_d)/2 - 2px),
+      var(--c) calc(var(--_d)/2) var(--_d))
+    49.8%/var(--_p);
+  clip-path: inset(0 round var(--_p))
+}
+

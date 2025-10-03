@@ -1,0 +1,123 @@
+body {
+  background-color: #ffffc8;
+  font-family: Rubik Puddles, monospace;
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.startContainer {
+  margin: auto;
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.startContainer img{
+  width: 100%;
+  height: auto;
+  background-color: #ffffc8;
+  display: block;
+  margin: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.startContainer .eggs{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -40%);
+  -ms-transform: translate(-50%, -80%);
+  background-color: transparent;
+  padding: 12px 24px;
+  border: none;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  transition: all 0.5s;
+
+}
+
+.prompt {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+}
+
+.eggs {
+  background-color: transparent;
+  margin: auto;
+  max-width: 50%;
+  filter: drop-shadow(0 0 10px #ffc400);
+}
+
+.steam {
+  transform: translate(50%, -120%);
+  position: absolute;
+  top: 30%;
+  width: 200px;
+  height: 200px;
+  z-index: 44;
+  opacity: 0.8;
+  display: flex;
+  filter: blur(20px);
+  &::before {
+    content: "";
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    animation: steam linear 10s infinite;
+    clip-path: polygon(
+      33% 40%,
+      52% 12%,
+      84% 29%,
+      62% 65%,
+      54% 89%,
+      73% 92%,
+      73% 74%,
+      53% 63%,
+      77% 57%,
+      95% 31%,
+      71% 3%,
+      34% 47%,
+      50% 37%,
+      69% 39%,
+      69% 29%,
+      76% 35%,
+      61% 6%,
+      64% 47%,
+      91% 9%,
+      51% 5%,
+      84% 61%,
+      91% 49%,
+      35% 19%,
+      40% 10%,
+      57% 41%,
+      57% 54%,
+      92% 19%
+    );
+  }
+}
+
+@keyframes steam {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-75px) scaleX(5);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-150px) scaleX(10);
+  }
+}
+
+
+/*
+https://solution-smith.com/diy/css/animation/smoke/
+https://codepen.io/NadaSadek/pen/xxRgZbq
+*/
