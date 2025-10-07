@@ -1,3 +1,51 @@
+.background {
+    background-color: lightcyan;
+    font-family: Syne Mono, monospace;
+}
+
 .prompt {
     text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+button {
+    display: inline;
+    margin: 5px;
+    background-color: #c3cd32;
+    border-radius: 10px;
+    border-color: transparent;
+    padding: 20px;
+    font-family: Syne Mono, monospace;
+}
+
+button:hover {
+    background-color: rgba(195, 205, 50, 0.5);
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    width: 50%;
+}
+
+.container #camera {
+    margin: auto;
+    width: 400px;
+    height: auto;
+}
+
+.container #selfie{
+    position: absolute;
+    top: 156px;
+    left: 102px;
+    object-position: center top;
+    object-fit: cover;
+    height: 140px;
+    width: 180px;
 }

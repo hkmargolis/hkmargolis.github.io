@@ -1,0 +1,116 @@
+/*style.css */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    font-family: 'Bungee Spice', monospace;
+
+}
+
+body h1 {
+    font-family: 'Bungee Spice', monospace;
+}
+
+body h2 {
+    font-family: 'Bungee Spice', monospace;
+}
+
+#canvas {
+    padding: 15px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #FFA500, #FF4500);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    margin: auto;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas1 {
+    border-radius: 20px;
+    margin-top: 15px;
+    display: none;
+    backdrop-filter: blur(3px);
+}
+
+#startScreen {
+    text-align: center;
+    margin: auto;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    background-image: url("https://img.freepik.com/free-vector/abstract-pixelated-grid-texture-dark-background-design_1017-56478.jpg?semt=ais_hybrid&w=740&q=80");
+    border-radius: 50%;
+    border: 1px solid orange;
+}
+
+.startDetails {
+    display: block;
+    padding: 50px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.startText {
+    margin: auto;
+    font-size: 135%;
+    animation: float 3s infinite;
+    filter: drop-shadow(0 0 10px black);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+input {
+    font-size: 16px;
+    border-radius: 5px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: black;
+    color: orange;
+    font-size: 10px;
+    text-transform: uppercase;
+    border-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 100px;
+    filter: drop-shadow(0 0 10px #ffc400);
+    font-family: 'Bungee Spice', monospace;
+}
+
+button:hover {
+    scale: 110%;
+}
+
+.prompt {
+    text-align: center;
+    display: block;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}

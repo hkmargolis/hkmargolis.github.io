@@ -1,0 +1,90 @@
+.background {
+    background-image: linear-gradient(var(--angle), #666547, #fb2e01, #6fcb9f, #ffe28a);
+    animation: gradient-rotate 10s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+body {
+    font-family: Monoton, monospace;
+}
+
+.prompt {
+    position: relative;
+    text-align: center;
+}
+.record {
+    display: grid;
+    max-width: 150px;
+    height: auto;
+    background-color: #6fcb9f;
+    background-image: none;
+    border-radius: 10px;
+}
+
+.record:hover {
+    scale: 110%;
+}
+
+.play_button {
+    background-color: transparent;
+    border: none;
+    font-family: Monoton, monospace;
+}
+
+.animated {
+    animation: infinite-rotate 5s linear infinite;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 4px 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+@keyframes infinite-rotate {
+    from {
+        transform: rotate(0deg);}
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes colorShift {
+    0% {
+        background: linear-gradient(0deg, #ff0000, #0000ff);
+    }
+    100% {
+        background: linear-gradient(360deg, #ff0000, #0000ff);
+    }
+
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 135deg;
+}
+
+/* 2. Define the animation keyframes */
+@keyframes gradient-rotate {
+    to {
+        --angle: 315deg;
+    }
+}
