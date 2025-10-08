@@ -9,15 +9,17 @@ body {
     align-items: center;
     background-color: #000000;
     font-family: 'Bungee Spice', monospace;
-
+    color: orange;
 }
 
 body h1 {
     font-family: 'Bungee Spice', monospace;
+    color: orange;
 }
 
 body h2 {
     font-family: 'Bungee Spice', monospace;
+    color: orange;
 }
 
 #canvas {

@@ -1,0 +1,258 @@
+/*https://www.geeksforgeeks.org/javascript/build-a-drawing-app-using-javascript/*/
+body {
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e3dede;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Reenie Beanie', monospace;
+    font-size: 24px;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/004/495/802/non_2x/black-and-white-hand-drawn-scribble-texture-background-illustration-free-vector.jpg");
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    max-height: 1000px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.tools-board {
+    width: 200px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: #f8f7f6;
+    padding: 15px 22px 0;
+    border: black 2px solid;
+}
+
+.tools-board .row {
+    margin-bottom: 20px;
+}
+
+.row .options {
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option:is(:hover, .active) img {
+    filter: grayscale(20%);
+}
+
+.option :where(span, label) {
+    color: black;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.option #fill-color {
+    height: 14px;
+    cursor: pointer;
+    width: 14px;
+}
+
+#fill-color:checked~label {
+    color: #e93e2b;
+}
+
+.colors .options {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+}
+
+.colors .option {
+    height: 20px;
+    width: 20px;
+    border-radius: 30%;
+    margin-top: 3px;
+    position: relative;
+}
+
+.colors .option:nth-child(1) {
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+}
+
+.colors .option:nth-child(2) {
+    background-color: black;
+}
+
+.colors .option:nth-child(3) {
+    background-color: #3b2219;
+}
+
+.colors .option:nth-child(4) {
+    background-color: #a16e4b;
+}
+
+.colors .option:nth-child(5) {
+    background-color: #d4aa78;
+}
+
+.colors .option:nth-child(6) {
+    background-color: #e6bc98;
+}
+
+.colors .option:nth-child(7) {
+    background-color: #ffe7d1;
+}
+
+.colors .option:nth-child(8) {
+    background-color: #f60000;
+}
+
+.colors .option:nth-child(9) {
+    background-color: #ff8c00;
+}
+
+.colors .option:nth-child(10) {
+    background-color: #ffee00;
+}
+
+.colors .option:nth-child(11) {
+    background-color: #4de94c;
+}
+
+.colors .option:nth-child(12) {
+    background-color: #3783ff;
+}
+
+.colors .option:nth-child(13) {
+    background-color: #4815aa;
+}
+
+.colors .option.selected::before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+}
+
+.colors .option:first-child.selected::before {
+    border-color: #ccc;
+}
+
+.option #color-picker {
+    opacity: 0;
+    cursor: pointer;
+}
+
+button {
+    color: black;
+    border: 1px solid #9fc39f;
+    transition: all 0.2s ease;
+    font-size: 20px;
+    font-family: "Reenie Beanie", monospace;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.save-img {
+    filter: drop-shadow(0 0 10px #9fc39f);
+}
+
+button:hover {
+    color: #fff;
+    background: #6c757d;
+}
+
+.drawing-board {
+    flex: 1;
+}
+
+.drawing-board canvas {
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    border: black 2px solid;
+}
+
+.prompt, .title {
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    background-color: #9fc39f;
+    color: black;
+    border-radius: 20px;
+    opacity: 85%;
+    width: fit-content;
+    padding: 10px
+}
+
+.border {
+    border: 10px solid transparent;
+    border-image: url("https://c4.wallpaperflare.com/wallpaper/547/35/580/pattern-texture-twigs-golden-color-wallpaper-preview.jpg") 30 round;
+}
+
+.gallery {
+    margin: 20px;
+    padding: 20px;
+    background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTEwMDM4MS1pbWFnZS1rd3Z5NTZ4Yi5qcGc.jpg");
+    border-radius: 10px;
+}
+
+.portraits {
+    display: inline;
+}
+
+.portrait {
+    list-style: none;
+    display: inline;
+    padding: 10px;
+}
+
+.portrait-img {
+    max-width: 150px;
+}
+
+.speech-bubble {
+    position: relative;
+    background: #9fc39f;
+    font-size: 20px;
+    color: #000000;
+    line-height: 50px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 25px;
+    opacity: 85%;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: #9fc39f transparent;
+    border-width: 20px 20px 0;
+    bottom: -15px;
+    left: 84%;
+    margin-left: -20px;
+    opacity: 85%;
+}

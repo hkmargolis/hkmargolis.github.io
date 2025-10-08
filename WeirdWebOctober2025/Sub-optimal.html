@@ -2,9 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../resources/css/breadcrumb.css">
+    <link rel="stylesheet" href="../resources/css/navbar.css">
+    <link rel="stylesheet" href="../resources/css/linklist.css">
+    <link rel="stylesheet" href="../resources/css/general.css">
+    <link rel="stylesheet" href="../resources/css/WeirdWebOctober2025/Sub-optimal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <script src="../resources/js/WeirdWebOctober2025/sub-optimal.js" defer></script>
+    <link rel="octo:octothorpes" href="Sub-optimal">
     <title>Sub-optimal</title>
 </head>
 <body>
+    <ul class="navbar">
+        <li style="list-style-type:none"><a href="../WeirdWebOctober2025.html">Weird Web October 2025</a></li>
+    </ul>
+    <p class="speech-bubble">Draw a stick figure portrait!</p>
+
+<!--    https://www.geeksforgeeks.org/javascript/build-a-drawing-app-using-javascript/-->
+    <div class="container">
+        <section class="tools-board">
+            <div class="row colors">
+                <label class="title">Colors</label>
+                <ul class="options">
+                    <li class="option"></li>
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option">
+                        <input type="color" value="#00FF00" name=""
+                               id="color-picker">
+                    </li>
+                </ul>
+            </div>
+            <div class="row buttons">
+                <button class="clear-canvas">Clear Canvas</button>
+                <button class="save-img">Add to Gallery</button>
+                <button class="download-img">Download</button>
+
+            </div>
+        </section>
+        <section class="drawing-board">
+            <canvas></canvas>
+        </section>
+    </div>
+
+    <div class="gallery">
+        <h3 class="title">Gallery</h3>
+        <ul id="portraits">
+            <li class="portrait"><img class="border portrait-img" src="../resources/images/WeirdWebOctober2025/portrait-1.png"></li>
+            <li class="portrait"><img class="border portrait-img" src="../resources/images/WeirdWebOctober2025/portrait-2.png"></li>
+        </ul>
+    </div>
+
+    <p class="prompt">Weird Web October | Day 7 Sub-optimal</p>
+
+    <footer class="navbar">
+        <a href="Solids.html"><< Day 6</a>
+        <a href="Containers.html">Day 8 >></a>
+    </footer>
 
 </body>
 </html>
